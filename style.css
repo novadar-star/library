@@ -69,3 +69,9 @@ button:hover{
     justify-content: space-around;
 
 }
+.inner-row{
+    display: flex;
+
+   justify-content: space-around;
+    border:1px solid black;
+}
