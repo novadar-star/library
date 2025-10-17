@@ -54,6 +54,10 @@ button{
     background-size: 1.7rem;
     text-align: left;
 
+ 
+}
+.header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
+
 }
