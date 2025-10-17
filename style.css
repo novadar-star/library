@@ -83,4 +83,8 @@ button:hover{
    
 }
 
+dialog {
+    padding:2rem 4rem 32em;
+    
+}
 /*add an html and css for a modal of add books*/
