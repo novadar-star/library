@@ -86,6 +86,7 @@ button:hover{
 dialog{
     margin: auto;
       border-radius: 1rem;
+      overflow: hidden;
 }
 .form-group{
     margin:1rem;
@@ -93,8 +94,9 @@ dialog{
     border:1px solid black;
     flex-direction: column;
     
-   
 }
+/* widen the input field
+add text validation*/
 .outer-form{
     border:1px solid pink;
     width: 100%;
