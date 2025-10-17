@@ -71,7 +71,12 @@ button:hover{
 }
 .inner-row{
     display: flex;
-
+    padding: 0.6rem;
    justify-content: space-around;
     border:1px solid black;
+    background-color: grey;
+    color: #fff4e6;
+    border-radius: 1rem;
+   
 }
+/*add an html and css for a modal of add books*/
