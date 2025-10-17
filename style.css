@@ -88,13 +88,25 @@ dialog{
       border-radius: 1rem;
 }
 .form-group{
-        display: flex;
-border:1px solid black;
-flex-direction: column;
+    margin:1rem;
+    display: flex;
+    border:1px solid black;
+    flex-direction: column;
+    
+   
 }
-
+.outer-form{
+    border:1px solid pink;
+    width: 100%;
+}
+input[type="text"]{
+    padding:0.5rem;
+    
+ 
+}
 section {
-    padding:2rem 3rem 15rem;
+    padding:2rem 6rem 10rem;
+    border:1px solid black;
   
     
 }
