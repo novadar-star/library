@@ -85,9 +85,17 @@ button:hover{
 
 dialog{
     margin: auto;
+      border-radius: 1rem;
 }
+.form-group{
+        display: flex;
+border:1px solid black;
+flex-direction: column;
+}
+
 section {
-    padding:2rem 6rem 22rem;
+    padding:2rem 3rem 15rem;
+  
     
 }
 /*add an html and css for a modal of add books*/
