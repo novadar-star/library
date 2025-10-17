@@ -42,6 +42,7 @@ body, .container {
 
 h1{
     font-size: 4rem;
+    margin-right: 10rem;
 }
 button{
     
@@ -53,7 +54,8 @@ button{
     background-repeat: no-repeat;
     background-size: 1.7rem;
     text-align: left;
-
+    margin-top:1rem;
+    margin-left: 15rem;
  
 }
 .header{
