@@ -83,8 +83,11 @@ button:hover{
    
 }
 
+dialog{
+    margin: auto;
+}
 section {
-    padding:2rem 6rem 30em;
+    padding:2rem 6rem 22rem;
     
 }
 /*add an html and css for a modal of add books*/
