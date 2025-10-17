@@ -38,7 +38,7 @@
         <dialog id="dialog">
             <form method = "dialog">
                 <section>
-                <h2>Add New Book</h2>
+                <h2 class="dialog-title">Add New Book</h2>
 
                 <div class="outer-form">
                 <div class="form-group">
@@ -59,7 +59,7 @@
                 </div>
                 <!--missing-->
                 <div class="form-group">
-                    <label for="file">Reading status</label>
+                    <label for="file">Reading Status</label>
                     <div class="radio">          
 
                     <input id="read" name="read" type="radio">
@@ -68,26 +68,30 @@
                     <input id="unread" name="read" type="radio">
                     <label for="unread">Unread</label>
                     </div>
-              
+
                 </div>
                 <div class="form-group">
                     <label for="notes">Notes</label>
-                    <textarea id="notes" rows="4" placeholder= " e.g. so heartbreaking :("></textarea>
+                    <textarea id="notes" rows="6" placeholder= " e.g. so heartbreaking :("></textarea>
                 </div>
+            
                 </div>
 
+                <div>
+                       <!--button is getting stretched due to flex-->
+                  <div class="dialog-btn">
+                   <!-- <input type="submit" id="normal-close" value="Normal close"> -->
+                    <button class="close">Cancel</button>
+                    <button class="addbookBtn">Add Book</button>
+                </div>
 
-               
-
-                <div class="dialog-btn">
-                    <input type="submit" id="normal-close" value="Normal close">
                 </div>
                 </section>
 
-
-
+            
             </form>
         </dialog>
+        
     </div>
      </div>
 

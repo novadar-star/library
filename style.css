@@ -43,7 +43,8 @@ h1{
     font-size: 4rem;
     margin-right: 10rem;
 }
-button{  
+
+#addnewBook{  
     border-radius:1.5rem;
     cursor: pointer;
     background: url("./img/plus.svg");
@@ -57,11 +58,10 @@ button{
    
 
 }
-button:hover{
-     background-color: #a8e6cf;
+#addnewBook:hover{
+     background-color: #6d6d6d;
      border: none;
      color: black;
-     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(200deg) brightness(103%) contrast(101%);
 }
 .header{
     display: flex;
@@ -80,33 +80,31 @@ button:hover{
     background-color: grey;
     color: #b3e5fc;
     border-radius: 1rem;
-   
 }
 
 dialog{
     margin: auto;
       border-radius: 1rem;
-      overflow: hidden;
+      
       border: 1px solid black;
 }
 .form-group{
     margin:1rem;
     display: flex;
-    border: 1px solid black;
     flex-direction: column;
     
 }
 /* widen the input field
 add text validation*/
 .outer-form{
-    border:1px solid pink;
     width: 100%;
+    border:1px solid pink;
 }
-input[type="text"]{
+input[type="text"], input[type="file"]{
     padding:0.5rem;
     background: #f6f7f7;
 }
-input, textarea{
+input,input[type="file"], textarea{
     background: #f6f7f7;
 
 }
@@ -116,8 +114,13 @@ input[type="number"]{
 }
 section {
     padding:2rem 6rem 10rem;
-    border:1px solid black;
-  
-    
+
+}
+h2{
+    font-size: 2.5rem;
+}
+
+.close, .addbookBtn{
+    width: fit-content;
 }
 /*add an html and css for a modal of add books*/
