@@ -61,7 +61,7 @@ h1{
 #addnewBook:hover{
      background-color: #6d6d6d;
      border: none;
-     color: black;
+     color: #b3e5fc;
 }
 .header{
     display: flex;
@@ -84,15 +84,13 @@ h1{
 
 dialog{
     margin: auto;
-      border-radius: 1rem;
-      
-      border: 1px solid black;
+    border-radius: 1rem;
+    border: 1px solid black;
 }
 .form-group{
     margin:1rem;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 /* widen the input field
 add text validation*/
@@ -113,7 +111,7 @@ input[type="number"]{
 
 }
 section {
-    padding:2rem 6rem 10rem;
+    padding:2rem 6rem 8rem;
 
 }
 h2{
@@ -124,3 +122,9 @@ h2{
     width: fit-content;
 }
 /*add an html and css for a modal of add books*/
+.dialogBtn{
+    display: flex;
+    border:1px solid rebeccapurple;
+    justify-content: flex-end;
+    width: 94%;
+}
