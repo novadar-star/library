@@ -87,11 +87,13 @@ dialog{
     margin: auto;
       border-radius: 1rem;
       overflow: hidden;
+      border: 1px solid black;
 }
 .form-group{
     margin:1rem;
     display: flex;
-    border:1px solid black;
+       border: 1px solid black;
+
     flex-direction: column;
     
 }
