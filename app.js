@@ -16,6 +16,11 @@ e.preventDefault() //prevents page refresh when submitting
 const fd = new FormData(form);
 console.log(fd);
 
+//to access the data use for loop to iterate
+for(item of fd){
+    console.log(item);
+}
+
 })
 
 
