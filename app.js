@@ -8,6 +8,16 @@ closeBtn.addEventListener("click", ()=>{
     dialog.close();
 })
 
+const form = document.querySelector("form");
+
+//add submit event to form
+form.addEventListener("submit", (e)=>{
+e.preventDefault() //prevents page refresh when submitting
+const fd = new FormData(form);
+console.log(fd);
+
+})
+
 
 const myLib = [];
 
