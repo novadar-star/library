@@ -143,3 +143,10 @@ h2{
     background-color: #5fb0d5;
     color: white;
 }
+
+/* text validation for input/styling*/
+
+input:focus, textarea:focus{
+    outline-color:#a8e6cf;
+
+}
