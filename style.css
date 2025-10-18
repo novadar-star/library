@@ -96,7 +96,7 @@ dialog{
 add text validation*/
 .outer-form{
     width: 100%;
-    border:1px solid pink;
+   
 }
 input[type="text"], input[type="file"]{
     padding:0.5rem;
@@ -125,7 +125,6 @@ h2{
 /*add an html and css for a modal of add books*/
 .dialogBtn{
     display: flex;
-    border:1px solid rebeccapurple;
     justify-content: flex-end;
     width: 94%;
     gap: 8px;
@@ -133,17 +132,25 @@ h2{
 }
 .close, .addbookBtn {
     padding: 0.4rem 0.8rem;
-     cursor: pointer;
-     border-radius: 5px;
-     border: 1px solid #6d6d6d;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
      
 }
+.close{
+    border: 1px solid #6d6d6d;
+}
 
+.close:hover{
+    background-color:#ded9d9;
+}
 .addbookBtn{
     background-color: #5fb0d5;
     color: white;
 }
-
+.addbookBtn:hover{
+    background-color: #489ec6;
+}
 /* text validation for input/styling*/
 
 input:focus, textarea:focus{
