@@ -21,6 +21,7 @@ const title = document.querySelector("#title");
 const author = document.querySelector("#author");
 const pages = document.querySelector("#numofPages");
 const file  = document.querySelector("#file");
+const read = document.querySelector("input[name='read']:checked").value;
 
 })
 
