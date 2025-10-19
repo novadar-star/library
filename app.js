@@ -24,6 +24,7 @@ const file  = document.querySelector("#file").value; //figure how to extract fil
 const read = document.querySelector("input[name='read']:checked").value;
 const notes = document.querySelector("#notes").value;
 
+addtoHTML();
 })
 
 
@@ -52,6 +53,6 @@ const add = new addBooktoLib();
 add.addBook();
 function addtoHTML(){
     for(let i = 0; i<book.addBook.length; i++){
-        const title
+        const title 
     }
 }
