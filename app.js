@@ -10,7 +10,16 @@ closeBtn.addEventListener("click", ()=>{
 
 //Get user input from form
 
-document.querySelectorAll('#dialog input')
+const submit = document.querySelector(".addbookBtn");
+submit.addEventListener("click", (e)=>{
+e.preventDefault() //prevents page refresh when submitting
+
+
+const data = Array.from(document.querySelectorAll('#dialog input')).reduce((acc, input)=> ({ ...acc,[input.id]:input.value}),{});
+console.log(data);
+})
+
+
 
 //Create new book from that data
 
