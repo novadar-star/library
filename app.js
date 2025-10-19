@@ -17,9 +17,12 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (e)=>{
 e.preventDefault() //prevents page refresh when submitting
 
+const title = document.querySelector("#title");
+const author = document.querySelector("#author");
+const pages = document.querySelector("#numofPages");
+const file  = document.querySelector("#file");
+
 })
-
-
 
 
 function Book(title, author, numofPages, file, read, notes){
