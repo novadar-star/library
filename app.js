@@ -17,11 +17,12 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (e)=>{
 e.preventDefault() //prevents page refresh when submitting
 
-const title = document.querySelector("#title");
-const author = document.querySelector("#author");
-const pages = document.querySelector("#numofPages");
-const file  = document.querySelector("#file");
+const title = document.querySelector("#title").value;
+const author = document.querySelector("#author").value;
+const pages = document.querySelector("#numofPages").value;
+const file  = document.querySelector("#file").value; //figure how to extract file
 const read = document.querySelector("input[name='read']:checked").value;
+const notes = document.querySelector("#notes").value;
 
 })
 
@@ -37,11 +38,20 @@ this.notes = notes;
 
 function addBooktoLib(){
     //create book and store new book object to an array
- const myLib = [];
- 
-    // book objects should have a unique id,
-
+ this.book = [];
+ this.addbook = function(book){
+    this.book.push(book);
+ }
+     // book objects should have a unique id,
 }
-let book = {
-    
+//book object
+const book = new Book();
+//addbooktoLib object
+const add = new addBooktoLib();
+
+add.addBook();
+function addtoHTML(){
+    for(let i = 0; i<book.addBook.length; i++){
+        const title
+    }
 }
