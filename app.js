@@ -53,6 +53,7 @@ const add = new addBooktoLib();
 add.addBook();
 function addtoHTML(){
     for(let i = 0; i<book.addBook.length; i++){
-        const title 
+        const title = document.createElement("h1");
+        article.appendChild(title);
     }
 }
