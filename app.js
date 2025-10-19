@@ -14,6 +14,7 @@ const form = document.querySelector("form");
 
 
 //add submit event to form
+const submit = document.querySelector(".addbookBtn");
 form.addEventListener("submit", (e)=>{
 e.preventDefault() //prevents page refresh when submitting
 
