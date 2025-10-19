@@ -21,28 +21,28 @@ const author = document.querySelector("#author").value;
 const pages = document.querySelector("#numofPages").value;
 const file  = document.querySelector("#file").value; 
 const read = document.querySelector('input[name=read]:checked').value; //add catch error
-
 const notes = document.querySelector("#notes").value;
-
-const bookInfo = new Book(title, author, pages, file, read, notes);
+const id = crypto.randomUUID().toString();
+const bookInfo = new Book(title, author, pages, file, read, notes,id);
 
 //console.log(bookInfo);
 
 //Add created book to library
+
+
 myLibrary.push(bookInfo); //push book objects to main lib
 console.log(myLibrary); 
 
 })
 
-
-
-function Book(title, author, numofPages, file, read, notes){
+function Book(title, author, numofPages, file, read, notes,id){
 this.title = title;
 this.author = author;
 this.numofPages = numofPages;
 this.file = file;
 this.read = read;
 this.notes = notes;
+this.id = id;
 }
 
 //Iterate through library and show all books from it
