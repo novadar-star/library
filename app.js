@@ -11,23 +11,22 @@ closeBtn.addEventListener("click", ()=>{
 const form = document.querySelector("form");
 
 
-
-
 //add submit event to form
 const submit = document.querySelector(".addbookBtn");
-form.addEventListener("submit", (e)=>{
+submit.addEventListener("submit", (e)=>{
 e.preventDefault() //prevents page refresh when submitting
 
 const title = document.querySelector("#title").value;
 const author = document.querySelector("#author").value;
 const pages = document.querySelector("#numofPages").value;
 const file  = document.querySelector("#file").value; //figure how to extract file
-const read = document.querySelector("input[name='read']:checked").value;
+//const read = document.querySelector('input[name=read]:checked').value;
 const notes = document.querySelector("#notes").value;
 
+const newdisplay = new Book(title);
+add.addbook(newdisplay);
 addtoHTML();
 })
-
 
 function Book(title, author, numofPages, file, read, notes){
 this.title = title;
@@ -50,10 +49,11 @@ function addBooktoLib(){
 const book = new Book();
 //addbooktoLib object
 const add = new addBooktoLib();
-
-add.addBook();
+//book is empty make sure to add title
+add.addbook();
+console.log(book);
 function addtoHTML(){
-    for(let i = 0; i<book.addBook.length; i++){
+    for(let i = 0; i<book.addbook.length; i++){
         const title = document.createElement("h1");
         article.appendChild(title);
     }
