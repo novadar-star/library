@@ -31,7 +31,11 @@ const bookInfo = new Book(title, author, pages, file, read, notes,id);
 
 
 myLibrary.push(bookInfo); //push book objects to main lib
-console.log(myLibrary); 
+//console.log(myLibrary); 
+
+for(var index in myLibrary){
+    console.log(myLibrary[index]);
+}
 
 })
 
