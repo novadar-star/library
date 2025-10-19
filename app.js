@@ -32,10 +32,15 @@ const bookInfo = new Book(title, author, pages, file, read, notes,id);
 
 myLibrary.push(bookInfo); //push book objects to main lib
 //console.log(myLibrary); 
+//, a.author, a.numofPages, a.file, a.read, a.notes, a.id)
+//accessed it but need to loop
+//returns all value? but kasama ung key
+//let info = myLibrary.map(a => ({title: a.title, author: a.author, pages:a.numofPages}))
 
-for(var index in myLibrary){
-    console.log(myLibrary[index]);
-}
+let info = myLibrary.map(a => a.author)
+let info2 = myLibrary.map(a => a.title)
+console.log(info, info2);
+
 
 })
 
