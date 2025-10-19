@@ -9,16 +9,30 @@ closeBtn.addEventListener("click", ()=>{
 })
 
 //Get user input from form
+function Book(title, author, numofPages, file, read, notes){
+this.title = title;
+this.author = author;
+this.numofPages = numofPages;
+this.file = file;
+this.read = read;
+this.notes = notes;
+}
 
 const submit = document.querySelector(".addbookBtn");
 submit.addEventListener("click", (e)=>{
 e.preventDefault() //prevents page refresh when submitting
 
+const title = document.querySelector("#title").value;
+const author = document.querySelector("#author").value;
+const pages = document.querySelector("#numofPages").value;
+const file  = document.querySelector("#file").value; 
+const read = document.querySelector('input[name=read]:checked').value; //add catch error
+const notes = document.querySelector("#notes").value;
 
-const data = Array.from(document.querySelectorAll('#dialog input')).reduce((acc, input)=> ({ ...acc,[input.id]:input.value}),{});
-console.log(data);
+const bookInfo = new Book(title, author, pages, file, read, notes);
+
+console.log(bookInfo);
 })
-
 
 
 //Create new book from that data
