@@ -102,6 +102,9 @@ input[type="text"], input[type="file"]{
     padding:0.5rem;
     background: #f6f7f7;
 }
+#notes{
+   height:5rem;
+}
 input,input[type="file"], textarea{
     background: #f6f7f7;
 
