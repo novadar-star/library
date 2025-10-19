@@ -10,32 +10,34 @@ closeBtn.addEventListener("click", ()=>{
 
 const form = document.querySelector("form");
 
+
+
+
 //add submit event to form
 form.addEventListener("submit", (e)=>{
 e.preventDefault() //prevents page refresh when submitting
-const fd = new FormData(form);
-console.log(fd);
-
-//to access the data use for loop to iterate
-for(item of fd){
-    console.log(item);
-}
 
 })
 
 
-const myLib = [];
 
 
-function Book(){
-
+function Book(title, author, numofPages, file, read, notes){
+this.title = title;
+this.author = author;
+this.numofPages = numofPages;
+this.file = file;
+this.read = read;
+this.notes = notes;
 }
 
 function addBooktoLib(){
     //create book and store new book object to an array
+ const myLib = [];
+ 
     // book objects should have a unique id,
-let book = {
-    title
+
 }
+let book = {
     
 }
