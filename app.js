@@ -8,6 +8,17 @@ closeBtn.addEventListener("click", ()=>{
     dialog.close();
 })
 
+//Get user input from form
+
+document.querySelectorAll('#dialog input')
+
+//Create new book from that data
+
+//Add created book to library
+
+//Iterate through library and show all books from it
+
+/*
 const form = document.querySelector("form");
 
 
@@ -23,7 +34,7 @@ const file  = document.querySelector("#file").value; //figure how to extract fil
 //const read = document.querySelector('input[name=read]:checked').value;
 const notes = document.querySelector("#notes").value;
 
-const newdisplay = new Book(title);
+const newdisplay = new Book(title, author, pages, file, read, notes);
 add.addbook(newdisplay);
 addtoHTML();
 })
@@ -35,7 +46,15 @@ this.numofPages = numofPages;
 this.file = file;
 this.read = read;
 this.notes = notes;
+
+this.info = function(){
+        console.log("The " + this.title + " by " + this.author + ", " + this.numofPages+  " pages " + this.read + "notes: " + this.notes);
+    }
 }
+/* test
+const littleLife = new Book("My Little Life", "Anya", 330,"./plus.svg", "has read");
+littleLife.info();
+
 
 function addBooktoLib(){
     //create book and store new book object to an array
@@ -50,11 +69,17 @@ const book = new Book();
 //addbooktoLib object
 const add = new addBooktoLib();
 //book is empty make sure to add title
-add.addbook();
+add.addbook(book);
+
 console.log(book);
+
+
+
+
 function addtoHTML(){
-    for(let i = 0; i<book.addbook.length; i++){
+    for(var items in book){
         const title = document.createElement("h1");
         article.appendChild(title);
     }
 }
+*/
