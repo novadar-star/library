@@ -35,13 +35,9 @@ myLibrary.push(bookInfo); //push book objects to main lib
 //, a.author, a.numofPages, a.file, a.read, a.notes, a.id)
 //accessed it but need to loop
 //returns all value? but kasama ung key
-//let info = myLibrary.map(a => ({title: a.title, author: a.author, pages:a.numofPages}))
-
-let info = myLibrary.map(a => a.author)
-let info2 = myLibrary.map(a => a.title)
-console.log(info, info2);
-
-
+let info = myLibrary.map(a => ({title: a.title, author: a.author, pages:a.numofPages, 
+    file: a.file, read: a.read, notes: a.notes, id: a.id}))
+console.log(info);
 })
 
 function Book(title, author, numofPages, file, read, notes,id){
