@@ -37,7 +37,13 @@ myLibrary.push(bookInfo); //push book objects to main lib
 //returns all value? but kasama ung key
 let info = myLibrary.map(a => ({title: a.title, author: a.author, pages:a.numofPages, 
     file: a.file, read: a.read, notes: a.notes, id: a.id}))
-console.log(info);
+
+    info.forEach((details, index)=>{
+        console.log(details.title);
+    })
+
+
+
 })
 
 function Book(title, author, numofPages, file, read, notes,id){
