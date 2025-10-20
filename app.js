@@ -35,17 +35,16 @@ myLibrary.push(bookInfo); //push book objects to main lib
 //, a.author, a.numofPages, a.file, a.read, a.notes, a.id)
 //accessed it but need to loop
 //returns all value? but kasama ung key
-let info = myLibrary.map(a => ({title: a.title, author: a.author, pages:a.numofPages, 
-    file: a.file, read: a.read, notes: a.notes, id: a.id}))
-
+//let info = myLibrary.map(a => ({title: a.title, author: a.author, pages:a.numofPages, 
+    //file: a.file, read: a.read, notes: a.notes, id: a.id}))
     const maincontent = document.getElementsByClassName("main-content")[0];
     console.log(maincontent);
 
-    info.forEach((details, index)=>{
-        let itemh1 = document.createElement("h1");
-        let itemh1Text= document.createTextNode(details.title);
-        itemh1.appendChild(itemh1Text);
-        maincontent.appendChild(itemh1);
+    myLibrary.forEach((details, index)=>{
+        let itemp = document.createElement("p");
+        let itempText= document.createTextNode(`${details.title} ${details.author} ${details.pages} ${details.read} `);
+        itemp.appendChild(itempText);
+        maincontent.appendChild(itemp);
         //console.log(details.title);
     })
 
