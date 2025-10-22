@@ -39,12 +39,15 @@ myLibrary.push(bookInfo); //push book objects to main lib
     //file: a.file, read: a.read, notes: a.notes, id: a.id}))
     const maincontent = document.getElementsByClassName("main-content")[0];
     console.log(maincontent);
-
+    /*FIGURE OUT HOW TO PRINT OBJECT EACH; NOT STACK*/
     myLibrary.forEach((details, index)=>{
+        let itemHR = document.createElement("HR")
         let itemp = document.createElement("p");
         let itempText= document.createTextNode(`${details.title} ${details.author} ${details.pages} ${details.read} `);
         itemp.appendChild(itempText);
         maincontent.appendChild(itemp);
+
+        maincontent.appendChild(itemHR)
         //console.log(details.title);
     })
 
