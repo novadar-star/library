@@ -103,6 +103,9 @@ input[type="text"], input[type="file"]{
     padding:0.5rem;
     background: #f6f7f7;
 }
+input[type="radio"]{
+    cursor: pointer;
+}
 #notes{
    height:5rem;
 }
@@ -141,6 +144,8 @@ h2{
     border: none;
      
 }
+
+
 .close{
     border: 1px solid #6d6d6d;
 }
