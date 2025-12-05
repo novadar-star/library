@@ -22,7 +22,7 @@ const title = document.querySelector("#title").value;
 const author = document.querySelector("#author").value;
 const numofPages = document.querySelector("#numofPages").value;    
 //const file  = document.querySelector("#file").value; 
-const read = document.querySelector('input[name=read]:checked').value; 
+const read = document.querySelector('input[name="read"]:checked').getAttribute('id');; 
 const notes = document.querySelector("#notes").value;
 //const id = crypto.randomUUID().toString();
 const bookInfo = new Book(title, author, numofPages, read, notes);
@@ -45,7 +45,7 @@ myLibrary.push(bookInfo); //push book objects to main lib
     myLibrary.forEach((details, index)=>{
         let itemHR = document.createElement("HR")
         let itemp = document.createElement("p");
-        let itempText= document.createTextNode(`${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.author} \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.numofPages}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.notes}`);
+        let itempText= document.createTextNode(`${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.author} \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.numofPages}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.read}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.notes}`);
         itemp.appendChild(itempText);
         maincontent.appendChild(itemp);
 
@@ -61,7 +61,6 @@ function Book(title, author, numofPages, read, notes){
 this.title = title;
 this.author = author;
 this.numofPages = numofPages;
-//this.file = file;
 this.read = read;
 this.notes = notes;
 
