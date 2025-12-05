@@ -57,7 +57,7 @@ myLibrary.push(bookInfo); //push book objects to main lib
         //console.log(details.title);
     })
 
-
+//figure out how to print that doesnt accumulate
 
 })
 
