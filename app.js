@@ -22,12 +22,12 @@ const title = document.querySelector("#title").value;
 const author = document.querySelector("#author").value;
 const numofPages = document.querySelector("#numofPages").value;    
 //const file  = document.querySelector("#file").value; 
-//const read = document.querySelector('input[name=read]:checked').value; //add catch error
+const read = document.querySelector('input[name=read]:checked').value; 
 const notes = document.querySelector("#notes").value;
-const id = crypto.randomUUID().toString();
-const bookInfo = new Book(title, author, numofPages, notes, id);
+//const id = crypto.randomUUID().toString();
+const bookInfo = new Book(title, author, numofPages, read, notes);
 
-//console.log(bookInfo);
+console.log(bookInfo);
 
 //Add created book to library
 
@@ -45,7 +45,7 @@ myLibrary.push(bookInfo); //push book objects to main lib
     myLibrary.forEach((details, index)=>{
         let itemHR = document.createElement("HR")
         let itemp = document.createElement("p");
-        let itempText= document.createTextNode(`${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.author}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.numofPages}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.read} `);
+        let itempText= document.createTextNode(`${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.author} \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.numofPages}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.notes}`);
         itemp.appendChild(itempText);
         maincontent.appendChild(itemp);
 
@@ -57,14 +57,14 @@ myLibrary.push(bookInfo); //push book objects to main lib
 
 })
 
-function Book(title, author, numofPages, file, read, notes,id){
+function Book(title, author, numofPages, read, notes){
 this.title = title;
 this.author = author;
 this.numofPages = numofPages;
-this.file = file;
+//this.file = file;
 this.read = read;
 this.notes = notes;
-this.id = id;
+
 }
 
 //Iterate through library and show all books from it
