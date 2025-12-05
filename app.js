@@ -43,8 +43,10 @@ myLibrary.push(bookInfo); //push book objects to main lib
     console.log(maincontent);
     /*FIGURE OUT HOW TO PRINT OBJECT EACH; NOT STACK*/
     myLibrary.forEach((details, index)=>{
-        let itemHR = document.createElement("HR")
-        let itemp = document.createElement("p");
+        let itemHR = document.createElement("HR") //create horizontal line
+        let itemp = document.createElement("p");  
+        const btnremove = document.createElement("button");
+        btnremove.textContent = "Remove";
         let itempText= document.createTextNode(`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
             ${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
             ${details.author}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
@@ -52,9 +54,10 @@ myLibrary.push(bookInfo); //push book objects to main lib
             ${details.read}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
             ${details.notes}`)
         maincontent.appendChild(itemp);
-         maincontent.appendChild(itempText);
+        maincontent.appendChild(itempText);
         maincontent.appendChild(itemHR);
-        //console.log(details.title);
+        maincontent.appendChild(btnremove);
+     
     })
 
 //figure out how to print that doesnt accumulate
@@ -69,71 +72,3 @@ this.read = read;
 this.notes = notes;
 
 }
-
-//Iterate through library and show all books from it
-
-/*
-const form = document.querySelector("form");
-
-
-//add submit event to form
-const submit = document.querySelector(".addbookBtn");
-submit.addEventListener("submit", (e)=>{
-e.preventDefault() //prevents page refresh when submitting
-
-const title = document.querySelector("#title").value;
-const author = document.querySelector("#author").value;
-const pages = document.querySelector("#numofPages").value;
-const file  = document.querySelector("#file").value; //figure how to extract file
-//const read = document.querySelector('input[name=read]:checked').value;
-const notes = document.querySelector("#notes").value;
-
-const newdisplay = new Book(title, author, pages, file, read, notes);
-add.addbook(newdisplay);
-addtoHTML();
-})
-
-function Book(title, author, numofPages, file, read, notes){
-this.title = title;
-this.author = author;
-this.numofPages = numofPages;
-this.file = file;
-this.read = read;
-this.notes = notes;
-
-this.info = function(){
-        console.log("The " + this.title + " by " + this.author + ", " + this.numofPages+  " pages " + this.read + "notes: " + this.notes);
-    }
-}
-/* test
-const littleLife = new Book("My Little Life", "Anya", 330,"./plus.svg", "has read");
-littleLife.info();
-
-
-function addBooktoLib(){
-    //create book and store new book object to an array
- this.book = [];
- this.addbook = function(book){
-    this.book.push(book);
- }
-     // book objects should have a unique id,
-}
-//book object
-const book = new Book();
-//addbooktoLib object
-const add = new addBooktoLib();
-//book is empty make sure to add title
-add.addbook(book);
-
-console.log(book);
-
-
-
-
-function addtoHTML(){
-    for(var items in book){
-        const title = document.createElement("h1");
-        article.appendChild(title);
-    }
-}
-*/
