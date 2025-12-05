@@ -45,10 +45,14 @@ myLibrary.push(bookInfo); //push book objects to main lib
     myLibrary.forEach((details, index)=>{
         let itemHR = document.createElement("HR")
         let itemp = document.createElement("p");
-        let itempText= document.createTextNode(`${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.author} \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.numofPages}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.read}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.notes}`);
-        itemp.appendChild(itempText);
+        let itempText= document.createTextNode(`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
+            ${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
+            ${details.author}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
+            ${details.numofPages}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
+            ${details.read}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
+            ${details.notes}`)
         maincontent.appendChild(itemp);
-
+         maincontent.appendChild(itempText);
         maincontent.appendChild(itemHR);
         //console.log(details.title);
     })
