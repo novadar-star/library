@@ -61,9 +61,12 @@ myLibrary.push(bookInfo); //push book objects to main lib
             ${details.notes}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0`)
         maincontent.appendChild(itemp);
         maincontent.appendChild(itempText);
-          maincontent.appendChild(btnremove);
+        maincontent.appendChild(btnremove);
+       
         maincontent.appendChild(itemHR);
-      
+       btnremove.addEventListener("click",()=>{
+          maincontent.remove(); 
+        })
      
     })
 
