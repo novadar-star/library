@@ -1,10 +1,12 @@
 const showBtn = document.querySelector("#addnewBook");
 showBtn.addEventListener("click", ()=>{
     dialog.showModal();
+   
 });
 
 const closeBtn = document.querySelector(".close");
-closeBtn.addEventListener("click", ()=>{
+closeBtn.addEventListener("click", (e)=>{
+    e.preventDefault();
     dialog.close();
 })
 
@@ -18,12 +20,12 @@ e.preventDefault() //prevents page refresh when submitting
 
 const title = document.querySelector("#title").value;
 const author = document.querySelector("#author").value;
-const pages = document.querySelector("#numofPages").value;
-const file  = document.querySelector("#file").value; 
-const read = document.querySelector('input[name=read]:checked').value; //add catch error
+const numofPages = document.querySelector("#numofPages").value;    
+//const file  = document.querySelector("#file").value; 
+//const read = document.querySelector('input[name=read]:checked').value; //add catch error
 const notes = document.querySelector("#notes").value;
 const id = crypto.randomUUID().toString();
-const bookInfo = new Book(title, author, pages, file, read, notes,id);
+const bookInfo = new Book(title, author, numofPages, notes, id);
 
 //console.log(bookInfo);
 
@@ -43,11 +45,11 @@ myLibrary.push(bookInfo); //push book objects to main lib
     myLibrary.forEach((details, index)=>{
         let itemHR = document.createElement("HR")
         let itemp = document.createElement("p");
-        let itempText= document.createTextNode(`${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.author}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.pages}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.read} `);
+        let itempText= document.createTextNode(`${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.author}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.numofPages}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.read} `);
         itemp.appendChild(itempText);
         maincontent.appendChild(itemp);
 
-        maincontent.appendChild(itemHR)
+        maincontent.appendChild(itemHR);
         //console.log(details.title);
     })
 

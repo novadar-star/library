@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Librarydada</title>
+    <title>Library</title>
     <link rel="stylesheet" href="style.css">
       <link rel="icon" type="image/x-icon" href="img/book.png"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,17 +51,21 @@
                     <label for="author">Author</label>
                     <input id="author" name="author" type="text" placeholder="e.g. Hanya Yanagihara"> 
                 </div>
+                <!--number mway problem..si reading status okay lang-->
+                <!--remove id-->
                  <div class="form-group">
                     <label for="numofPages">Number of Pages</label>
-                    <input id="numofPages" name="numofPages" type="number"  placeholder="e.g. 340">
+                    <input id="numofPages" name="numofPages" type="number" placeholder="e.g. 340">
                 </div>
+                <!--
                  <div class="form-group">
                     <label for="file">Upload Cover Photo</label>
                     <input id="file" name="file" type="file" accept="image/png, image/jpeg, image/jpg">
                 </div>
-                <!--missing-->
+                -->
+                <!--missing
                 <div class="form-group">
-                    <label for="file">Reading Status</label>
+                    <h6>Reading Status</h6>
                     <div class="radio">          
 
                     <input id="read" name="read" type="radio">
@@ -72,14 +76,14 @@
                     </div>
 
                 </div>
+
+                -->
                 <div class="form-group">
                     <label for="notes">Notes</label>
                     <input type="text" id="notes" name="notes" placeholder= " e.g. so heartbreaking :("></input>
                 </div>
 
-                      <!--button is getting stretched due to flex-->
                   <div class="dialogBtn">
-                   <!-- <input type="submit" id="normal-close" value="Normal close"> -->
                     <button class="close">Cancel</button>
                     <button class="addbookBtn" type="submit">Add Book</button>
                 </div>
