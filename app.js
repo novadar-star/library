@@ -43,7 +43,7 @@ myLibrary.push(bookInfo); //push book objects to main lib
     myLibrary.forEach((details, index)=>{
         let itemHR = document.createElement("HR")
         let itemp = document.createElement("p");
-        let itempText= document.createTextNode(`${details.title} ${details.author} ${details.pages} ${details.read} `);
+        let itempText= document.createTextNode(`${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.author}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.pages}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ${details.read} `);
         itemp.appendChild(itempText);
         maincontent.appendChild(itemp);
 

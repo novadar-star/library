@@ -166,3 +166,7 @@ input:focus, textarea:focus{
     outline-color:#a8e6cf;
 
 }
+
+p{
+    color: black;
+}
