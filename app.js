@@ -13,7 +13,7 @@ closeBtn.addEventListener("click", (e)=>{
 
 const myLibrary = [];
 //Get user input from form
-
+/*
 const submit = document.querySelector(".addbookBtn");
 submit.addEventListener("click", (e)=>{
 e.preventDefault() //prevents page refresh when submitting
@@ -22,7 +22,7 @@ const title = document.querySelector("#title").value;
 const author = document.querySelector("#author").value;
 const numofPages = document.querySelector("#numofPages").value;    
 //const file  = document.querySelector("#file").value; 
-const read = document.querySelector('input[name="read"]:checked').getAttribute('id');; 
+const read = document.querySelector('input[name="read"]:checked').getAttribute('id');   
 const notes = document.querySelector("#notes").value;
 //const id = crypto.randomUUID().toString();
 const bookInfo = new Book(title, author, numofPages, read, notes);
@@ -30,14 +30,15 @@ const bookInfo = new Book(title, author, numofPages, read, notes);
 console.log(bookInfo);
 
 //Add created book to library
-
-myLibrary.push(bookInfo); //push book objects to main lib
+*/
+//myLibrary.push(bookInfo); //push book objects to main lib
 //console.log(myLibrary); 
 //, a.author, a.numofPages, a.file, a.read, a.notes, a.id)
 
+/*
     const maincontent = document.getElementsByClassName("main-content")[0];
     console.log(maincontent);
-    /*FIGURE OUT HOW TO PRINT OBJECT EACH; NOT STACK*/
+  
     myLibrary.forEach((details, index)=>{
         let itemHR = document.createElement("HR") //create horizontal line
         let itemp = document.createElement("p");  
@@ -66,10 +67,16 @@ myLibrary.push(bookInfo); //push book objects to main lib
         })
      
     })
-
+*/
 //figure out how to print that doesnt accumulate
 
-})
+
+const form = document.querySelector("form");
+function addDetails(e){
+    e.preventDefault();
+    alert("working bitch")
+}
+form.addEventListener("submit", addDetails)
 
 function Book(title, author, numofPages, read, notes){
 this.title = title;

@@ -30,10 +30,16 @@ body, .container {
 }
 .sidebar-con{
     border-radius: 0.5rem;
-    background-color: #fce6e5;
-    padding: 4.5rem;
+    background-color: #eceff0;
+    width:80%;
+    height: 16%;
     margin: 2rem;
     border:1px solid black;
+}
+h5{
+   font-weight: normal;
+   text-align: justify;
+   margin:1.5rem;
 }
 .header{
     grid-area: header;
