@@ -87,7 +87,7 @@ alert(title+author+ numofPages+ read+ notes)
 
     tbodyDetails.innerHTML+=
     `<tr class = "addRows">
-    <td>${file}</td>
+<td><img src="onChange=swapImage(file)" data-index="0" width="100" height="100" style="display:block; margin: auto;"><td/>
     <td>${title}</td>
     <td>${author}</td>
     <td>${numofPages}</td>
@@ -107,7 +107,6 @@ var URL = window.URL || window.webkitURL
 
 window.swapImage = function (elm) {
   var index = elm.dataset.index
-  // URL.createObjectURL is faster then using the filereader with base64
   var url = URL.createObjectURL(elm.files[0])
   document.querySelector('img[data-index="'+index+'"]').src = url
 }
