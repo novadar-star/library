@@ -71,12 +71,30 @@ console.log(bookInfo);
 //figure out how to print that doesnt accumulate
 
 
-const form = document.querySelector("form");
+const formDetails = document.querySelector("form");
+const tbodyDetails = document.querySelector("tbody");
 function addDetails(e){
     e.preventDefault();
-    alert("working bitch")
+    
+const title = document.querySelector("#title").value;
+const author = document.querySelector("#author").value;
+const numofPages = document.querySelector("#numofPages").value;    
+//const file  = document.querySelector("#file").value; 
+const read = document.querySelector('input[name="read"]:checked').getAttribute('id');   
+const notes = document.querySelector("#notes").value;
+//const id = crypto.randomUUID().toString();
+alert(title+author+ numofPages+ read+ notes)
+tbodyDetails.innerHTML+=
+`<tr>
+<td>${details.title}</td>
+<td>${details.author}</td>
+<td>${details.numofPages}</td>
+<td>${details.read}</td>
+<td>${details.notes}</td>
+<td><button class ="deleteBtn">Remove</button></td>
+</tr>`
 }
-form.addEventListener("submit", addDetails)
+formDetails.addEventListener("submit", addDetails)
 
 function Book(title, author, numofPages, read, notes){
 this.title = title;
