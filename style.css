@@ -25,6 +25,9 @@ body, .container {
    
 }
 
+.greeting{
+    margin: 1rem;
+}
 .sidebar-con{
     border-radius: 0.5rem;
     background-color: #fce6e5;
