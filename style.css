@@ -58,6 +58,17 @@ h5{
     color: #f68981;
 }
 
+.row-header{
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+   justify-content: space-around;
+    background-color: grey;
+    color: #b3e5fc;
+    border-radius: 1rem;
+}
+.firstbook {
+    text-align: center;
+}
 h1{
     font-size: 4rem;
     margin-right: 10rem;
@@ -100,15 +111,6 @@ tr,th,td{
 .content{
     width: 90%;
    margin-left:2.5rem;
-}
-.inner-row{
-    display: flex;
-    padding: 0.6rem;
-   justify-content: space-around;
-    border:1px solid black;
-    background-color: grey;
-    color: #b3e5fc;
-    border-radius: 1rem;
 }
 
 dialog{
