@@ -73,29 +73,38 @@ console.log(bookInfo);
 
 const formDetails = document.querySelector("form");
 const tbodyDetails = document.querySelector("tbody");
+const tableDetails = document.querySelector("table");
 function addDetails(e){
     e.preventDefault();
     
 const title = document.querySelector("#title").value;
 const author = document.querySelector("#author").value;
 const numofPages = document.querySelector("#numofPages").value;    
-//const file  = document.querySelector("#file").value; 
 const read = document.querySelector('input[name="read"]:checked').getAttribute('id');   
 const notes = document.querySelector("#notes").value;
-//const id = crypto.randomUUID().toString();
 alert(title+author+ numofPages+ read+ notes)
-tbodyDetails.innerHTML+=
-`<tr>
-<td>${title}</td>
-<td>${author}</td>
-<td>${numofPages}</td>
-<td>${read}</td>
-<td>${notes}</td>
-<td><button class ="deleteBtn">Remove</button></td>
-</tr>`;
+
+    tbodyDetails.innerHTML+=
+    `<tr>
+    <td>${title}</td>
+    <td>${author}</td>
+    <td>${numofPages}</td>
+    <td>${read}</td>
+    <td>${notes}</td>
+    <td><button class ="deleteBtn">Remove</button></td>
+    </tr>`;
 }
 
+
+function onDeleteRow(e){
+    if (!e.target.classList.contains("deleteBtn")){
+        return;
+    }
+    const btn = e.target;
+    btn.closest("tr").remove(); //closests starts at element itself
+}
 formDetails.addEventListener("submit", addDetails);
+tableDetails.addEventListener("click", onDeleteRow)
 
 function Book(title, author, numofPages, read, notes){
 this.title = title;
