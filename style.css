@@ -138,7 +138,7 @@ input[type="radio"]{
     cursor: pointer;
 }
 #notes{
-   height:5rem;
+   height:4rem;
 }
 input,input[type="file"], textarea{
     background: #f6f7f7;
