@@ -31,14 +31,10 @@ console.log(bookInfo);
 
 //Add created book to library
 
-
 myLibrary.push(bookInfo); //push book objects to main lib
 //console.log(myLibrary); 
 //, a.author, a.numofPages, a.file, a.read, a.notes, a.id)
-//accessed it but need to loop
-//returns all value? but kasama ung key
-//let info = myLibrary.map(a => ({title: a.title, author: a.author, pages:a.numofPages, 
-    //file: a.file, read: a.read, notes: a.notes, id: a.id}))
+
     const maincontent = document.getElementsByClassName("main-content")[0];
     console.log(maincontent);
     /*FIGURE OUT HOW TO PRINT OBJECT EACH; NOT STACK*/
@@ -51,8 +47,8 @@ myLibrary.push(bookInfo); //push book objects to main lib
         btnremove.style.padding = "0.5em";
         btnremove.style.color = "white";
         btnremove.style.margin = "0.2em";
-         btnremove.style.borderRadius = "0.3em";
-
+        btnremove.style.borderRadius = "0.3em";
+        //dyanmicallyc reate a table adding rows instead`
          maincontent.append(`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
             ${details.title}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0
             ${details.author}\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0

@@ -24,6 +24,14 @@ body, .container {
     background: #b3e5fc;
    
 }
+
+.sidebar-con{
+    border-radius: 0.5rem;
+    background-color: #fce6e5;
+    padding: 4.5rem;
+    margin: 2rem;
+    border:1px solid black;
+}
 .header{
     grid-area: header;
     padding:2rem;
