@@ -86,15 +86,16 @@ const notes = document.querySelector("#notes").value;
 alert(title+author+ numofPages+ read+ notes)
 tbodyDetails.innerHTML+=
 `<tr>
-<td>${details.title}</td>
-<td>${details.author}</td>
-<td>${details.numofPages}</td>
-<td>${details.read}</td>
-<td>${details.notes}</td>
+<td>${title}</td>
+<td>${author}</td>
+<td>${numofPages}</td>
+<td>${read}</td>
+<td>${notes}</td>
 <td><button class ="deleteBtn">Remove</button></td>
-</tr>`
+</tr>`;
 }
-formDetails.addEventListener("submit", addDetails)
+
+formDetails.addEventListener("submit", addDetails);
 
 function Book(title, author, numofPages, read, notes){
 this.title = title;
