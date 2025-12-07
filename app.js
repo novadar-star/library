@@ -132,3 +132,7 @@ this.read = read;
 this.notes = notes;
 
 }
+
+
+//add color classfication to reading, done, will read
+//add another column for taable
