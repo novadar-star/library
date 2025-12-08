@@ -85,9 +85,12 @@ const read = document.querySelector('input[name="read"]:checked').getAttribute('
 const notes = document.querySelector("#notes").value;
 alert(title+author+ numofPages+ read+ notes)
 
-    tbodyDetails.innerHTML+=
-    `<tr class = "addRows">
-<td><img src="onChange=swapImage(file)" data-index="0" width="100" height="100" style="display:block; margin: auto;"><td/>
+//<img src="onChange=swapImage(file)" data-index="0" width="100" height="100" style="display:block; margin: auto;"><td/>
+  
+    tbodyDetails.innerHTML+=`  
+    <tr class = "addRows">
+    <td><img src="https://via.placeholder.com/100x100" data-indexx="0" width="100" height="100" style="display:block; margin: auto;">
+</td>
     <td>${title}</td>
     <td>${author}</td>
     <td>${numofPages}</td>
@@ -96,9 +99,7 @@ alert(title+author+ numofPages+ read+ notes)
     <td><button class ="deleteBtn">Remove</button></td>
     </tr>`;
 
-   
 }
-
 // Source - https://stackoverflow.com/a
 // Posted by Endless
 // Retrieved 2025-12-07, License - CC BY-SA 3.0
@@ -108,7 +109,7 @@ var URL = window.URL || window.webkitURL
 window.swapImage = function (elm) {
   var index = elm.dataset.index
   var url = URL.createObjectURL(elm.files[0])
-  document.querySelector('img[data-index="'+index+'"]').src = url
+  document.querySelector('img[data-indexx="'+index+'"]').src = url
 }
 
 function onDeleteRow(e){
